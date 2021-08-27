@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-  secret : SECRET,
+  secret : process.env.SECRET,
   resave : false,
   saveUninitialized : false,
   store: MongoStore.create({ mongoUrl: 'mongodb://localhost/authentication2b' })
