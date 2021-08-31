@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container form-container">
+        <form class="form" action="/users/register" method="POST">
+            <% if(info){ %>
+                <p><%= info %></p>
+            <% } %>
+
+            <div>
+                Name :
+                <input type="text" name="name">
+            </div>
+            <div>
+                Email :
+                <input type="email" name="email" id="">
+            </div>
+            <div>
+                Password :
+                <input type="password" name="password" id="">
+            </div>
+            <div class="radio">
+                Admin/User :
+                <input type="radio" name="isAdmin" value="Admin" checked> Admin
+                <input type="radio" name="isAdmin" value="User"> User
+            </div>
+            <div>
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+.product{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: max-content;
+    background-color: rgb(26, 26, 24);
+    color: blanchedalmond;
+    border-radius: 10px;
+    overflow: hidden;
+    // padding: 2rem 0;
+    // border: 2px solid green;
+    margin: 2rem 0;
+    .product_image{
+        display: flex;
+        justify-content: center;
+        .img {
+            // border: 2px solid red;
+            display: flex;
+            justify-self: center;
+            width: 100%;
+        }
+    }
+}
+
+.product_content {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button {
+        padding: 0.25rem 0.8rem;
+        border-radius: 10px;
+        border: none;
+        background-color: blanchedalmond;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 1rem 0;
+    }
+}
+.product_name{
+    text-align: center;
+}
+
+.single-product{
+    display: flex;
+    flex-direction: row;
+    background-color: blanchedalmond;
+    .single-product-content{
+        // border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: blanchedalmond;
+        padding: 0 2rem;
+        font-size: 1.25rem;
+        .name_of_product {
+            font-size: 1.5rem;
+        }
+        button {
+            padding: 0.5rem 1.5rem;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            color: blanchedalmond;
+            background-color: black;
+            text-align: basis;
+            font-size: 1.25rem;
+            i{
+                padding-right: 1rem;
+            }
+        }
+    }
+}
+
+.likes_dislikes{
+    padding: 1rem 0;
+}
+.single-product-options{
+    button {
+        padding: 0.25rem 1.5rem;
+    }
+    
+}
+
+.user-dashboard, .admin-dashboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    // border: 1px solid red;
+    justify-content: center;
+}
