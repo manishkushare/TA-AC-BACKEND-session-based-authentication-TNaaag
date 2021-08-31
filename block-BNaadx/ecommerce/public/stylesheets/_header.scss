@@ -1,0 +1,38 @@
+.header{
+    background-color: black;
+    color: blanchedalmond;
+    padding: 2rem 0;
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    h1{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+}
+.navigation {
+    .nav_list{
+        display: flex;
+        justify-content: end;
+        align-items: baseline;
+        li{
+            margin:0 1rem;
+            a {
+                text-decoration: none;
+                color: blanchedalmond;
+                button{
+                    padding: 0.5rem 1rem;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 1.05rem;
+                    cursor: pointer;
+                    background-color: blanchedalmond;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,43 @@
+<%- include('partials/adminDashboardHeader') -%>
+    <main>
+        <div class="hero-product-single-container">
+            <div class="container">
+                <div class="single-product">
+                    <div class="single-product-image-container">
+                        <img src="/uploads/<%= product.avatar_of_product%>" alt="">
+                    </div>
+                    <div class="single-product-content">
+                        <h2 class="name_of_product"><%= product.name_of_product%></h2>
+                        <h2 class="quantity_of_product">Quantity :<%= product.quantity_of_product%></h2>
+                        <h2 class="price_of_product">MRP: INR<%= product.price_of_product%></h2>
+                        <div class="likes_dislikes">
+                            <span>
+                                <button>
+                                    <i class="fas fa-heart"></i>
+                                    <span><%= product.likes_of_product %></span>
+                                </button>
+                                
+                            </span>
+                            <span>
+                                <button>
+                                    <i class="fas fa-heart-broken"></i>
+                                    <span><%= product.dislikes_of_product %></span>
+
+                                </button>
+                                
+                            </span>
+                        </div>
+                        <div class="single_product_options">
+                            <a href="/admin/<%= product.id%>/edit">
+                                <button>Edit</button>
+                            </a>
+                            <a href="/admin/<%= product.id%>/delete">
+                                <button>Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>

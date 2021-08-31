@@ -1,0 +1,55 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.form {
+    border-radius: 10px;
+    padding: 5rem;
+    background-color: black;
+    color: blanchedalmond;
+    p {
+        font-size: 1.25rem;
+        color: red;
+    }
+    &>div{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .radio{
+        flex-direction: row;
+    }
+    button{
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+.comment-form-container{
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.comment_form{
+    &> div {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 5rem;
+    }
+    .btn {
+        width: 100%;
+        // border: 1px solid white;
+        text-align: center
+        button {
+            width: 10% !important;
+        }
+
+    }
+    
+}
