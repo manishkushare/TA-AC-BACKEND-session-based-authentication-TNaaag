@@ -1,0 +1,71 @@
+<%- include('partials/userDashboardHeader') -%>
+    <main>
+        <div class="hero-product-single-container">
+            <div class="container">
+                <div class="single-product">
+                    <div class="single-product-image-container">
+                        <img src="/uploads/<%= product.avatar_of_product%>" alt="">
+                    </div>
+                    <div class="single-product-content">
+                        <h2 class="name_of_product"><%= product.name_of_product%></h2>
+                        <h2 class="quantity_of_product">Quantity :<%= product.quantity_of_product%></h2>
+                        <h2 class="price_of_product">MRP: INR<%= product.price_of_product%></h2>
+                        <div class="likes_dislikes">
+                            <span>
+                                <a href="/users/<%= product.id%>/likes">
+                                    <button>
+                                        <i class="fas fa-heart"></i>
+                                        <span><%= product.likes_of_product %></span>
+                                    </button>
+    
+                                </a>
+                            </span>
+                            <span>
+                                <a href="/users/<%= product.id%>/dislike">
+                                    <button>
+                                        <i class="fas fa-heart-broken"></i>
+                                        <span><%= product.dislikes_of_product %></span>
+    
+                                    </button>
+    
+                                </a>
+                                
+                            </span>
+                        </div>
+                        <div class="single_product_options">
+                            <a href="/users/<%= product.id%>/addtocart">
+                                <button>Add to Cart</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="comment-form-container">
+                    <form action="/users/<%= product.id%>/comment" class="comment_form" method="POST">
+                        <div>
+                            Content
+                            <textarea name="content" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Add Comment</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="comment_content">
+                    <% product.comments_of_product.forEach(comment => {%>
+                        <div class="comment">
+                            <h2>Content: <%= comment.content%></h2>
+                            <h2>Author :<%= comment.author%></h2>
+                            <a href="/comments/<%= comment.id%>/edit">
+                                <button>Edit</button>
+                            </a>
+                            <a href="/comments/<%= comment.id%>/delete">
+                                <button>Delete</button>
+                            </a>
+                        </div>
+                    <%}) %>
+                </div>
+            </div>
+        </div>
+
+    </main>

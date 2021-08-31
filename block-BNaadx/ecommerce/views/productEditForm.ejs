@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container form-container">
+        <form class="form" action="/admin/<%= product.id%>" method="POST" enctype="multipart/form-data">
+            <div>
+                Name of Product:    
+                <input type="text" name="name_of_product" value="<%= product.name_of_product%>">
+            </div>
+            <div>
+                Quantity :
+                <input type="number" name="quantity_of_product" id="" value="<%= product.quantity_of_product%>">
+            </div>
+            <div>
+                Price of Product :
+                <input type="number" name="price_of_product" id="" value="<%= product.price_of_product%>">
+            </div>
+            <div>
+                Image :
+                <input type="file" name="avatar_of_product" id="" value="<%= product.avatar_of_product%>" default = "<%= product.avatar_of_product%>">
+            </div>
+            <div>
+                <button type="submit">Update Product</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

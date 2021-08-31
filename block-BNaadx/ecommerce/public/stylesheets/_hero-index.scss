@@ -1,0 +1,24 @@
+.hero-index{
+    background-image: url(/images/hero-banner-index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(202, 197, 200, 0.3);
+
+    min-height: 85vh;
+}
+
+.hero-index-content-container{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(12, 19, 20);
+    font-size: 1.25rem;
+    font-weight: 900;
+    padding: 0 2rem;
+    .hero-index-content{
+        h2{
+            text-align: center;
+        }
+    }
+}

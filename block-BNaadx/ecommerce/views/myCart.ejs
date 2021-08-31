@@ -1,0 +1,42 @@
+<%- include('partials/userDashboardHeader') -%>
+    <main>
+        <div class="hero-user-dashboard">
+            <div class="container ">
+                <div class="user-dashboard">
+                    
+                        <%user.cart.forEach(product => { %>
+                            <div class="product">
+                                <div class="product_image">
+                                    <img class= "img" src="/uploads/<%= product.avatar_of_product%>" alt="">
+        
+                                </div>
+                                <ul class="product_content">
+                                    <li class="product_name">
+                                        <%= product.name_of_product%>
+                                    </li>
+                                    <li>
+                                        MRP : INR<%= product.price_of_product%>
+                                    </li>
+                                    <li>
+                                        <a href="/users/<%= product.id%>">
+                                            <button>Learn More...</button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/users/<%= product.id%>/RemoveFromCart">
+                                            <button>Remove from Cart</button>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <% })%>
+
+                        <% if(user.cart.length){ %>
+                            <%= user.name %>
+                        <% } else { %>
+                            <h2>Nothing inside</h2>
+                        <% } %>
+                </div>
+                
+            </div>
+    </main>

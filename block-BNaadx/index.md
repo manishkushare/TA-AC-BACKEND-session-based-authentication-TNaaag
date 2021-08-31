@@ -20,3 +20,11 @@ A logged in user can view product list and details page.
 - can like a product
 - can add product to his cart for buying.
 - can add comment on produts(optional)
+
+
+
+<!-- 
+<% if(user.likedProduct.length >= 1){%>
+                        <h1>No Items present in your myLikes</h1>
+                    <%}%> -->
+  
